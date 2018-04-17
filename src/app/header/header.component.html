@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" [routerLink]="['dashboard']">LOGO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5 padding-none">
+            <ul class="navbar-nav">
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" [routerLink]="['chatbot']">Chatbot</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['dataTable']">DataTable </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['formsDemo']">Forms</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        links
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" [routerLink]="['httpDemo']">Http </a>
+                        <a class="dropdown-item" [routerLink]="['pipes']">Pipes </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5 pull-right padding-none">
+            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 padding-none">
+                <div>Welcome {{userName}} | {{currentRoleName}} </div>
+                <div>( {{currentDate | date:'dd-MMM-yyyy'}}) </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-1 col-sm-1 col-lg-1 pull-right padding-none">
+            <input type="button" name="logout" class="btn-danger" style="outline:none;" (click)="logout();" value="Logout">
+        </div>
+    </div>
+</nav>

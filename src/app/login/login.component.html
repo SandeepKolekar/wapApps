@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="wrapper">
+        <form novalidate [formGroup]="fg" (ngSubmit)="doLogin()" class="form-signin">
+            <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+            <hr class="colorgraph"><br>
+            <input type="text" formControlName="userName" class="form-control" name="userName" placeholder="User Name" />
+            <div *ngIf="fg.controls.userName.dirty">
+                <p class="help-block alert alert-danger" *ngIf="!fg.controls.userName.valid">Username Required </p>
+            </div>
+            <input type="password" formControlName="password" class="form-control" name="Password" placeholder="Password" />
+            <div *ngIf="fg.controls.password.dirty">
+                <p class="help-block alert alert-danger" *ngIf="!fg.controls.password.valid">Password Required</p>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" [disabled]="!fg.valid" value="Login">Login</button>
+            <div class="login-help">
+                <a [routerLink]="['/signup']">Signup</a> - <a [routerLink]="['/fotgotpassword']">Forgot Password</a>
+            </div>
+        </form>
+    </div>
+</div>

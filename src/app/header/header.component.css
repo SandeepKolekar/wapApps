@@ -1,0 +1,40 @@
+.bg-dark {
+    background-color: #186a8a !important;
+    color: white !important;
+}
+
+li a {
+    color: white !important;
+    padding-left: 20px;
+}
+
+li {
+    padding-left: 20px;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #4981c7!important;
+    color: white !important;
+}
+
+.navbar-nav .dropdown-menu :hover {
+    background-color: #e69531!important;
+    color: white !important;
+}
+
+.nav-item dropdown show {
+    background-color: #4981c7!important;
+    color: white !important;
+}
+
+.pull-right {
+    text-align: right !important;
+}
+
+.padding-none {
+    padding: 0;
+}
+
+.navbar-user-name {
+    padding-right: 50px;
+}

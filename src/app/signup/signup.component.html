@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="wrapper">
+        <form novalidate [formGroup]="signup" (ngSubmit)="sendSignUpDetails()" class="form-signin">
+            <h3 class="form-signin-heading">Sign Up</h3>
+            <hr class="colorgraph"><br>
+
+            <input type="text" class="form-control" formControlName="firstName" name="firstName" placeholder="First name">
+            <div *ngIf="signup.controls.firstName.dirty">
+                <p class="help-block alert alert-danger" *ngIf="!signup.controls.firstName.valid">Invalid first name.</p>
+            </div>
+            <input type="text" class="form-control" formControlName="middleName" name="middleName" placeholder="Middle name">
+            <div *ngIf="signup.controls.middleName.dirty">
+                <p class="help-block alert alert-danger" *ngIf="!signup.controls.middleName.valid">Invalid middle name </p>
+            </div>
+            <input type="text" class="form-control" formControlName="lastName" name="lastName" placeholder="Last name">
+            <div *ngIf="signup.controls.lastName.dirty">
+                <p class="help-block alert alert-danger" *ngIf="!signup.controls.lastName.valid">Invalid last name</p>
+            </div>
+            <input type="text" class="form-control" formControlName="email" name="email" placeholder="Email">
+            <div *ngIf="signup.controls.email.dirty">
+                <p class="help-block alert alert-danger" *ngIf="!signup.controls.email.valid">Invalid email id</p>
+            </div>
+            <input type="text" class="form-control" formControlName="contactNo" name="contactNo" placeholder="Contact No">
+            <div *ngIf="signup.controls.contactNo.dirty">
+                <p class="help-block alert alert-danger" *ngIf="!signup.controls.contactNo.valid">Invalid contact no</p>
+            </div>
+            <input type="password" class="form-control" formControlName="password" name="password" placeholder="Password">
+            <div *ngIf="signup.controls.password.dirty">
+                <p class="help-block alert alert-danger" *ngIf="!signup.controls.password.valid">{{signup.controls.password.errors.len}}</p>
+                <p class="help-block alert alert-danger" *ngIf="!signup.controls.password.valid">{{signup.controls.password.errors.ers}}</p>
+            </div>
+            <input type="password" class="form-control" formControlName="confirmPassword" name="pass" placeholder="Confirm Password">
+            <div *ngIf="signup.controls.confirmPassword.dirty">
+                <p class="help-block alert alert-danger" *ngIf="!signup.controls.confirmPassword.valid">{{signup.controls.confirmPassword.errors.len}}</p>
+                <p class="help-block alert alert-danger" *ngIf="!signup.controls.confirmPassword.valid">{{signup.controls.confirmPassword.errors.ers}}</p>
+            </div>
+
+            <button class="btn btn-lg btn-primary btn-block" name="Submit" value="signUp" type="Submit" [disabled]="!signup.valid" value="SignUp">Sign Up</button>
+            <div>
+                <a [routerLink]="['/login']">Login</a> - <a [routerLink]="['/fotgotpassword']">Fotgot Password</a>
+            </div>
+        </form>
+    </div>
+</div>

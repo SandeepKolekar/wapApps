@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-12 jumbotron">
+    <p *ngIf="! pageLoader">{{currentDate}}</p>
+    <p *ngIf="pageLoader" >Loading.....</p>
+  </div>
+  <input type="button" value="Get date" (click)="getDate()">
+</div>
+

@@ -1,0 +1,72 @@
+<div class="container-fluid">
+    <div class="mainbox col-md-12 col-sm-12 col-xs-12 center">
+        <div class="panel">
+            <!--Page Title  -->
+            <div class="login-panel">
+                <div class="panel-title">
+                    <span> Data Table</span>
+                    <span class=" pull-right">
+                        <span class="closePageIcon dashBoradCountOnHover" (click)="closePage();">
+                            <i class=" fa fa-times" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="panel-body">
+                <!--Table list content  -->
+                <div class="form-group col-sm-12 col-md-12 col-xs-12 padding-none">
+                    <div class="col-md-12 col-sm-12 col-xs-12 table-responsive  padding-none scrollbox">
+                        <table class="table table-bordered none-margin-table scrollbox-content">
+                            <tr>
+                                <!--Sr No -->
+                                <th class="headerCell text-center" style="width:10%">
+                                    <span>SR No</span>
+                                    <a class="sortIcon pull-right"><i class="fa fa-sort" aria-hidden="true"></i></a>
+                                </th>
+
+                                <!-- ID-->
+                                <th class="headerCell text-center" style="width:10%">
+                                    <span>ID</span>
+                                    <a class="sortIcon pull-right" (click)="idSortFlag = ! tableSort(idSortFlag,'id');"><i class="fa fa-sort" aria-hidden="true"></i></a><br>
+                                    <input type="text" class="form-control" #idFilter (keyup)="tableFilter(idFilter.value,nameFilter.value,emailFilter.value,mobileFilter.value);">
+                                </th>
+
+                                <!-- Name-->
+                                <th class="headerCell text-center" style="width:10%">
+                                    <span>Name</span>
+                                    <a class="sortIcon pull-right" (click)="nameSortFlag = ! tableSort(nameSortFlag,'name');"><i class="fa fa-sort" aria-hidden="true"></i></a><br>
+                                    <input type="text" class="form-control" #nameFilter (keyup)="tableFilter(idFilter.value,nameFilter.value,emailFilter.value,mobileFilter.value);">
+                                </th>
+
+                                <!--Email-->
+                                <th class="headerCell text-center" style="width:10%">
+                                    <span>Email</span>
+                                    <a class="sortIcon pull-right" (click)="emailSortFlag = ! tableSort(emailSortFlag,'email');"><i class="fa fa-sort" aria-hidden="true"></i></a><br>
+                                    <input type="text" class="form-control" #emailFilter (keyup)="tableFilter(idFilter.value,nameFilter.value,emailFilter.value,mobileFilter.value);">
+                                </th>
+
+                                <!-- Mobile-->
+                                <th class="headerCell text-center" style="width:10%">
+                                    <span>Mobile</span>
+                                    <a class="sortIcon pull-right" (click)="mobileSortFlag = ! tableSort(mobileSortFlag,'mobile');"><i class="fa fa-sort" aria-hidden="true"></i></a><br>
+                                    <input type="text" class="form-control" #mobileFilter (keyup)="tableFilter(idFilter.value,nameFilter.value,emailFilter.value,mobileFilter.value);">
+                                </th>
+
+                            </tr>
+                            <tr *ngFor="let item of employeeData ; let i = index" style="background-color: #F3F7FC">
+                                <td class="text-center tableCustomRow">{{i+1}}</td>
+                                <td class="text-center tableCustomRow">{{item.id}}</td>
+                                <td class="text-center tableCustomRow">{{item.name | upperCasePipe }}</td>
+                                <td class="text-center tableCustomRow">{{item.email | dashline}}</td>
+                                <td class="text-center tableCustomRow">{{item.mobile | dashline}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 pagination">
+                        <ngb-pagination [collectionSize]="employeeData.length" [(page)]="currentPage"></ngb-pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
