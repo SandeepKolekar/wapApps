@@ -2,8 +2,9 @@ import { AuthServiceService } from '../auth-service/auth-service.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../http/http.service';
+import { ForgotPassword } from './forgot-password.component';
 import { AsyncValidatorFn,ValidatorFn,FormBuilder,FormGroup,Validators,AbstractControl,ValidationErrors,FormArray,FormControl } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
+import {MatDialog} from '@angular/material';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,43 +12,68 @@ import {MatInputModule} from '@angular/material/input';
 })
 
 export class LoginComponent {
+
+  pageLoader : boolean;
   currentDate: string;
+  invalidLogin: boolean;
   url : string;
   private fg: FormGroup;
+
   constructor(
     private router: Router ,
     private authService: AuthServiceService ,
     private HttpService: HttpService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    public dialog: MatDialog
   ) {
     this.fg = fb.group({
       userName: ['', Validators.compose([Validators.required])],
       password: ['', Validators.compose([Validators.required])]
     });
   }
+  usernameChange(){
+    this.invalidLogin = false ;
+  }
 
   doLogin() {
-    console.dir(this.fg);
+    this.pageLoader = true ;
+    this.invalidLogin = false ;
     let roleLists , authtoken , currentDate , userCode , userName , menuJson ;
     this.url = 'login/authenticate';
     const sendData = {
       'userName' :this.fg.value.userName ,
       'password': this.fg.value.password 
     };
-    
     this.HttpService.save(sendData).subscribe(
       res => { 
+          this.pageLoader = false ;
           roleLists = JSON.stringify(res.data.roleList);
           authtoken = res.data.authtoken;
           currentDate = res.data.dateTime;
           userCode = res.data.userCode;
           userName = res.data.userName;
           menuJson = res.data.jsonMenu;
-        
           this.authService.setUserData(userName,userCode, authtoken, menuJson, roleLists, currentDate);
-          this.router.navigate(['home']);
+         this.router.navigate(['home']);
       } , 
-      error => {console.log(error);}
+      error => {
+        this.pageLoader = false ;
+        this.invalidLogin = true;
+      }
     ); 
   }
+
+  openDialog(): void {
+    this.invalidLogin = false;
+    let dialogRef = this.dialog.open(ForgotPassword, {
+      height: '400px',
+      width: '600px',
+      data: { "data":"" }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
 }

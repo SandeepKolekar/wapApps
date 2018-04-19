@@ -3,25 +3,28 @@
         <form novalidate [formGroup]="fg" (ngSubmit)="doLogin()" class="form-signin">
             <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
             <hr class="colorgraph"><br>
-
             <mat-form-field class="input-full-width">
                 <input matInput type="text" formControlName="userName" name="userName" placeholder="User Name" />
             </mat-form-field>
             <div *ngIf="fg.controls.userName.dirty">
                 <p class="help-block alert alert-danger" *ngIf="!fg.controls.userName.valid">Username Required </p>
             </div>
-
             <mat-form-field class="input-full-width">
-                <input matInput type="password" formControlName="password" name="Password" placeholder="Password" />
+                <input matInput type="password" formControlName="password" (keyup)="usernameChange();" name="Password" placeholder="Password" />
             </mat-form-field>
 
             <div *ngIf="fg.controls.password.dirty">
                 <p class="help-block alert alert-danger" *ngIf="!fg.controls.password.valid">Password Required</p>
             </div>
-            <button mat-raised-button color="warn" class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" [disabled]="!fg.valid" value="Login">Login</button>
+            <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" [disabled]="!fg.valid" value="Login">Login</button>
+            <mat-progress-bar *ngIf="pageLoader" mode="indeterminate"></mat-progress-bar>
+
+            <div>
+                <p class="help-block alert alert-danger" *ngIf="invalidLogin">Invalid User Details</p>
+            </div>
 
             <div class="login-help">
-                <a [routerLink]="['/signup']">Signup</a> - <a [routerLink]="['/fotgotpassword']">Forgot Password</a>
+                <a [routerLink]="['/signup']">Signup</a> - <a (click)="openDialog()">Forgot Password</a>
             </div>
         </form>
     </div>

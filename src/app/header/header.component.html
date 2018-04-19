@@ -12,9 +12,19 @@
                 <li class="nav-item">
                     <a class="nav-link" [routerLink]="['dataTable']">DataTable </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['formsDemo']">Forms</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Forms
+                        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" [routerLink]="['formsDemo']">Forms 1 </a>
+                        <a class="dropdown-item" [routerLink]="['forms2']">Forms 2 </a>
+                    </div>
                 </li>
+
+
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         links
