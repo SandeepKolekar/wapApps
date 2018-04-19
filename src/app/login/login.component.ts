@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../http/http.service';
 import { AsyncValidatorFn,ValidatorFn,FormBuilder,FormGroup,Validators,AbstractControl,ValidationErrors,FormArray,FormControl } from '@angular/forms';
-
+import {MatInputModule} from '@angular/material/input';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

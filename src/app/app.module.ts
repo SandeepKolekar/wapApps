@@ -24,6 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpService } from './http/http.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ChatBotComponent } from './chat-bot/chat-bot.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +48,8 @@ import { ChatBotComponent } from './chat-bot/chat-bot.component';
   ],
   imports: [NgbModule,
     BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
     AppRouting,
     ReactiveFormsModule,
     FormsModule,
