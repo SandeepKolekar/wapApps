@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ViewChild } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgbPaginationConfig } from '@ng-bootstrap/ng-bootstrap';
+
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+
 
 @Component({
   selector: 'app-data-table',
   templateUrl: './data-table.component.html',
-  providers: [NgbPaginationConfig], // add NgbPaginationConfig to the component providers
   styleUrls: ['./data-table.component.css']
 })
 export class DataTableComponent implements OnInit {
@@ -18,15 +19,14 @@ export class DataTableComponent implements OnInit {
   mobileSortFlag = false ;
   currentPage = 1 ;
 
-  constructor(config: NgbPaginationConfig , private router: Router) {
-    // customize default values of paginations used by this component tree
-    config.size = 'sm';
-    config.maxSize = 10;
-    config.pageSize = 10 ;
-    config.ellipses = false ;
-    config.boundaryLinks = true;
-    config.directionLinks = true;
-    config.rotate = true;
+  constructor(private router: Router) {
+   // Create 100 users
+   const users: UserData[] = [];
+   for (let i = 1; i <= 100; i++) { users.push(createNewUser(i)); }
+
+   // Assign the data to the data source for the table to render
+   this.dataSource = new MatTableDataSource(users);
+
   }
   // Change Page No--------------------------------------
   changePageNo(pageNo){
@@ -94,4 +94,55 @@ export class DataTableComponent implements OnInit {
     ];
     this.employeeTempData = this.employeeData  ;
   }
+
+  displayedColumns = ['id', 'name', 'progress', 'color'];
+  dataSource: MatTableDataSource<UserData>;
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+  /**
+   * Set the paginator and sort after the view init since this component will
+   * be able to query its view for the initialized paginator and sort.
+   */
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
+  }
+}
+
+/** Builds and returns a new User. */
+function createNewUser(id: number): UserData {
+  const name =
+      NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
+      NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
+
+  return {
+    id: id.toString(),
+    name: name,
+    progress: Math.round(Math.random() * 100).toString(),
+    color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
+  };
+
+
+
+}
+
+/** Constants used to fill up our data base. */
+const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+  'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
+const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+  'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
+  'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+
+export interface UserData {
+  id: string;
+  name: string;
+  progress: string;
+  color: string;
 }
