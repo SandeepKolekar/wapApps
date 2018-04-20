@@ -11,15 +11,26 @@ import { AuthTokenGuard } from './auth-token.guard';
 import { UnauthorizedSourceComponent } from './unauthorized-source/unauthorized-source.component';
 import { ChatBotComponent } from './chat-bot/chat-bot.component';
 import { HomeComponent } from './home/home.component';
+import { Form2Component } from './form2/form2.component';
+import { DataTable1Component } from './data-table1/data-table1.component';
+import { DataTable2Component } from './data-table2/data-table2.component';
 
 const dashRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent , canActivate: [AuthTokenGuard]},
     { path: 'chatbot', component: ChatBotComponent , canActivate: [AuthTokenGuard]},
     { path: 'dataTable', component: DataTableComponent , canActivate: [AuthTokenGuard]},
     { path: 'formsDemo', component: FormsComponent , canActivate: [AuthTokenGuard]},
+    { path: 'formsDemo1', component: Form2Component , canActivate: [AuthTokenGuard]},
+    { path: 'dataTable1', component: DataTable1Component , canActivate: [AuthTokenGuard]},
+    { path: 'dataTable2', component: DataTable2Component , canActivate: [AuthTokenGuard]},
     { path: 'httpDemo', component: HttpDemoComponent, canActivate: [AuthTokenGuard]},
     { path: '**', redirectTo: 'dashboard' }
 ];
+
+
+
+
+
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },

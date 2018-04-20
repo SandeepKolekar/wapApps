@@ -20,7 +20,7 @@ export class HttpService {
  
   save(data): Observable<any> {
     const serviceKey = '070b4547-64b1-42cc-8bb2-efe5bbe9e387';
-    const  url =  "https://192.168.11.98:6565/Talentric/login/authenticate";
+    const  url =  "https://192.168.11.49:6565/Talentric/login/authenticate";
 
     const httpOptions = {
       headers: new HttpHeaders({

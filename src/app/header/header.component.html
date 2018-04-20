@@ -6,12 +6,17 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5 padding-none">
             <ul class="navbar-nav">
-                <!-- <li class="nav-item active">
-                    <a class="nav-link" [routerLink]="['chatbot']">Chatbot</a>
-                </li> -->
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['dataTable']">DataTable </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DataTable
+                        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" [routerLink]="['dataTable']">DataTable  1</a>
+                        <a class="dropdown-item" [routerLink]="['dataTable1']">DataTable 2 </a>
+                        <a class="dropdown-item" [routerLink]="['dataTable2']">DataTable 3</a>
+                    </div>
                 </li>
+
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -19,7 +24,7 @@
                         </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" [routerLink]="['formsDemo']">Forms 1 </a>
-                        <a class="dropdown-item" [routerLink]="['forms2']">Forms 2 </a>
+                        <a class="dropdown-item" [routerLink]="['formsDemo1']">Forms 2 </a>
                     </div>
                 </li>
 

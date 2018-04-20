@@ -53,13 +53,12 @@
                 </div>
                 <!-- Date of birth -->
                 <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <mat-form-field class="input-full-width">
-                        <input matInput type="text" formControlName="contactNo" name="contactNo" placeholder="Date Of Birth">
-
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
-                    <div *ngIf="signup.controls.contactNo.dirty">
-                        <p class="help-block alert alert-danger" *ngIf="!signup.controls.contactNo.valid">Invalid contact no</p>
-                    </div>
+
                 </div>
 
                 <!-- Password -->
