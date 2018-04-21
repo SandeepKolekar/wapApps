@@ -44,6 +44,10 @@ export class LoginComponent {
       'userName' :this.fg.value.userName ,
       'password': this.fg.value.password 
     };
+
+    this.authService.setUserData("userName","userCode", "authtoken", "menuJson", "roleLists", "currentDate");
+    this.router.navigate(['home']);
+    /*
     this.HttpService.save(sendData).subscribe(
       res => { 
           this.pageLoader = false ;
@@ -60,14 +64,14 @@ export class LoginComponent {
         this.pageLoader = false ;
         this.invalidLogin = true;
       }
-    ); 
+    ); */
   }
 
   openDialog(): void {
     this.invalidLogin = false;
     let dialogRef = this.dialog.open(ForgotPassword, {
-      height: '400px',
-      width: '600px',
+      height: '300px',
+      width: '500px',
       data: { "data":"" }
     });
 

@@ -16,7 +16,7 @@
             <div *ngIf="fg.controls.password.dirty">
                 <p class="help-block alert alert-danger" *ngIf="!fg.controls.password.valid">Password Required</p>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" [disabled]="!fg.valid" value="Login">Login</button>
+            <button mat-raised-button color="primary" class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" [disabled]="!fg.valid" value="Login">Login</button>
             <mat-progress-bar *ngIf="pageLoader" mode="indeterminate"></mat-progress-bar>
 
             <div>

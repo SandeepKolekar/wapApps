@@ -9,29 +9,35 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatTableModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatSidenavModule,
+  MatFormFieldModule,
+  MatTooltipModule
 } from '@angular/material';
+const materialModules = [
+  MatButtonModule,
+  MatInputModule,
+  MatProgressBarModule,
+  MatDialogModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatSidenavModule,
+  MatFormFieldModule,
+  MatTooltipModule 
+];
 
 @NgModule({
-  imports: [
-    MatButtonModule,
-    MatInputModule,
-    MatProgressBarModule,
-    MatDialogModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatTableModule,
-    MatPaginatorModule
-  ],
-  exports: [
-    MatButtonModule,
-    MatInputModule,
-    MatProgressBarModule,
-    MatDialogModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatTableModule,
-    MatPaginatorModule
-  ],
+  imports: [...materialModules],
+  exports: [...materialModules],
 })
 export class MaterialModule { }
