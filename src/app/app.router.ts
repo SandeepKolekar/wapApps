@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { Form2Component } from './form2/form2.component';
 import { DataTable1Component } from './data-table1/data-table1.component';
 import { DataTable2Component } from './data-table2/data-table2.component';
+import { SteppersComponent } from './steppers/steppers.component';
+import { TabComponent } from './tab/tab.component';
 
 const dashRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent , canActivate: [AuthTokenGuard]},
@@ -23,6 +25,8 @@ const dashRoutes: Routes = [
     { path: 'formsDemo1', component: Form2Component , canActivate: [AuthTokenGuard]},
     { path: 'dataTable1', component: DataTable1Component , canActivate: [AuthTokenGuard]},
     { path: 'dataTable2', component: DataTable2Component , canActivate: [AuthTokenGuard]},
+    { path: 'steppers', component: SteppersComponent , canActivate: [AuthTokenGuard]},
+    { path: 'tab', component: TabComponent , canActivate: [AuthTokenGuard]},
     { path: 'httpDemo', component: HttpDemoComponent, canActivate: [AuthTokenGuard]},
     { path: '**', redirectTo: 'dashboard' }
 ];

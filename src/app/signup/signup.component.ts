@@ -42,11 +42,23 @@ export class SignupComponent implements OnInit {
       contactNo: ['', Validators.compose([
         Validators.required, Validators.pattern("^[0-9]+$")
       ])],
+      gender: ['', Validators.compose([
+        Validators.required
+      ])],
+      dob: ['', Validators.compose([
+        Validators.required
+      ])],
+
       password: ['', Validators.compose([Validators.required, this.passwordCheck1, this.passwordCheck2])],
       confirmPassword: ['', Validators.compose([Validators.required, this.confirmPasswordCheck1, this.confirmPasswordCheck2])]
     });
   }
 
+
+gender = [
+  {code: 'm', value: 'Male'},
+  {code: 'f', value: 'Female'}
+];
 
   ngOnInit() {
   }

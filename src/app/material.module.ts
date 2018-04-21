@@ -16,7 +16,15 @@ import {
   MatCardModule,
   MatSidenavModule,
   MatFormFieldModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatSelectModule,
+  MatStepperModule,
+  MatTabsModule,
+  MatCheckboxModule,
+  MatAutocompleteModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatRadioModule
 } from '@angular/material';
 const materialModules = [
   MatButtonModule,
@@ -33,7 +41,15 @@ const materialModules = [
   MatCardModule,
   MatSidenavModule,
   MatFormFieldModule,
-  MatTooltipModule 
+  MatTooltipModule ,
+  MatSelectModule,
+  MatStepperModule,
+  MatTabsModule,
+  MatCheckboxModule,
+  MatAutocompleteModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatRadioModule
 ];
 
 @NgModule({

@@ -1,5 +1,7 @@
 import { Component, OnInit , ViewChild } from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-data-table1',
   templateUrl: './data-table1.component.html',
@@ -8,7 +10,7 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 export class DataTable1Component implements OnInit {
 
 
-  constructor() {
+  constructor(private router: Router) {
     // Create 100 users
     const users: UserData[] = [];
     for (let i = 1; i <= 100; i++) { users.push(createNewUser(i)); }
@@ -19,6 +21,10 @@ export class DataTable1Component implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  closePage(){
+    this.router.navigate(['home/dashboard']);
   }
 
   displayedColumns = ['id', 'name', 'progress', 'color'];

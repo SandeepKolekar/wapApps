@@ -30,6 +30,8 @@ import { DataTable1Component } from './data-table1/data-table1.component';
 import { Form2Component } from './form2/form2.component';
 import { DataTable2Component } from './data-table2/data-table2.component';
 import { ForgotPassword } from './login/forgot-password.component';
+import { SteppersComponent } from './steppers/steppers.component';
+import { TabComponent } from './tab/tab.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { ForgotPassword } from './login/forgot-password.component';
     DataTable1Component,
     Form2Component,
     DataTable2Component,
-    ForgotPassword
+    ForgotPassword,
+    SteppersComponent,
+    TabComponent
   ],
   entryComponents: [
     ForgotPassword
