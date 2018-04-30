@@ -16,6 +16,7 @@ import { DataTable1Component } from './data-table1/data-table1.component';
 import { DataTable2Component } from './data-table2/data-table2.component';
 import { SteppersComponent } from './steppers/steppers.component';
 import { TabComponent } from './tab/tab.component';
+import { DecoratorComponent } from './decorator/decorator.component';
 
 const dashRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent , canActivate: [AuthTokenGuard]},
@@ -28,13 +29,9 @@ const dashRoutes: Routes = [
     { path: 'steppers', component: SteppersComponent , canActivate: [AuthTokenGuard]},
     { path: 'tab', component: TabComponent , canActivate: [AuthTokenGuard]},
     { path: 'httpDemo', component: HttpDemoComponent, canActivate: [AuthTokenGuard]},
+    { path: 'decorator', component: DecoratorComponent, canActivate: [AuthTokenGuard]},
     { path: '**', redirectTo: 'dashboard' }
 ];
-
-
-
-
-
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },

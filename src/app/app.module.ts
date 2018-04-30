@@ -32,6 +32,7 @@ import { DataTable2Component } from './data-table2/data-table2.component';
 import { ForgotPassword } from './login/forgot-password.component';
 import { SteppersComponent } from './steppers/steppers.component';
 import { TabComponent } from './tab/tab.component';
+import { DecoratorComponent } from './decorator/decorator.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { TabComponent } from './tab/tab.component';
     DataTable2Component,
     ForgotPassword,
     SteppersComponent,
-    TabComponent
+    TabComponent,
+    DecoratorComponent
   ],
   entryComponents: [
     ForgotPassword
