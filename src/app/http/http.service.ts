@@ -1,11 +1,10 @@
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders, HttpParams} from '@angular/common/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/toPromise';
-
+//import 'rxjs/add/operator';
+//import 'rxjs/add/operator/catch';
+//import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class HttpService {
@@ -14,8 +13,8 @@ export class HttpService {
     private http: HttpClient
   ) { }
 
-  getData(zipCode): Observable<ArrayBuffer> {
-    return this.http.get(`https://digital-shelter-153912.firebaseio.com/morning.json`).catch(this.errHndlr);
+  getData(zipCode): Observable<any> {
+    return this.http.get(`https://digital-shelter-153912.firebaseio.com/morning.json`);
   }
  
   save(data): Observable<any> {
@@ -34,10 +33,6 @@ export class HttpService {
     };
        return this.http.post( url , data , httpOptions);
   }
-
-
-
-
 
   chatBotPostData(msg: any): Observable<any> {
     const accessToken = '6bc535e289014f2c87bb3a1ff6b0081f';

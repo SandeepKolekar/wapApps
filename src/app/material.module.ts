@@ -24,7 +24,9 @@ import {
   MatAutocompleteModule,
   MatSliderModule,
   MatSlideToggleModule,
-  MatRadioModule
+  MatRadioModule,
+  MatSortModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 const materialModules = [
   MatButtonModule,
@@ -49,7 +51,9 @@ const materialModules = [
   MatAutocompleteModule,
   MatSliderModule,
   MatSlideToggleModule,
-  MatRadioModule
+  MatRadioModule,
+  MatSortModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({

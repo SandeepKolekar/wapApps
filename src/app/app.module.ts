@@ -33,6 +33,13 @@ import { ForgotPassword } from './login/forgot-password.component';
 import { SteppersComponent } from './steppers/steppers.component';
 import { TabComponent } from './tab/tab.component';
 import { DecoratorComponent } from './decorator/decorator.component';
+import { HttpDataTableComponent } from './http-data-table/http-data-table.component';
+import { jqxBarGaugeComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxbargauge';
+import { jqxChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxchart';
+import { jqxBulletChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxbulletchart';
+
+import { JqwidgetsChartsComponent } from './jqwidgets-charts/jqwidgets-charts.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -58,7 +65,10 @@ import { DecoratorComponent } from './decorator/decorator.component';
     ForgotPassword,
     SteppersComponent,
     TabComponent,
-    DecoratorComponent
+    DecoratorComponent,
+    HttpDataTableComponent,
+    JqwidgetsChartsComponent,
+    jqxBarGaugeComponent 
   ],
   entryComponents: [
     ForgotPassword
@@ -70,7 +80,8 @@ import { DecoratorComponent } from './decorator/decorator.component';
     AppRouting,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+      CommonModule
   ],
   providers: [GlobalService, AuthServiceService, HttpService, AuthTokenGuard],
   bootstrap: [AppComponent]

@@ -4,16 +4,17 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5 padding-none">
+        <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6 padding-none">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         DataTable
                         </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" [routerLink]="['dataTable']">DataTable  1</a>
-                        <a class="dropdown-item" [routerLink]="['dataTable1']">DataTable 2 </a>
-                        <a class="dropdown-item" [routerLink]="['dataTable2']">DataTable 3</a>
+                        <a class="dropdown-item" [routerLink]="['dataTable']"> Simple DataTable</a>
+                        <a class="dropdown-item" [routerLink]="['dataTable1']">Data Table </a>
+                        <a class="dropdown-item" [routerLink]="['dataTable2']">CheckBox Data Table</a>
+                        <a class="dropdown-item" [routerLink]="['httpDataTable']">Http Data Table</a>
                     </div>
                 </li>
 
@@ -40,30 +41,48 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Charts
+                        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" [routerLink]="['jqwidgetsCharts']">jqwidgets Charts </a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Concept
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" [routerLink]="['decorator']">Decorator </a>
                     </div>
                 </li>
-
             </ul>
         </div>
 
-        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5 pull-right padding-none">
+        <div class="col-xs-12 col-md-4 col-sm-4 col-lg-4 pull-right padding-none">
             <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 padding-none">
-                <div>Welcome {{userName}} | {{currentRoleName}} </div>
-                <div>( {{currentDate | date:'dd-MMM-yyyy'}}) </div>
+                <!-- <div>Welcome {{userName}} | {{currentRoleName}} </div>
+                <div>( {{currentDate | date:'dd-MMM-yyyy'}}) </div> -->
             </div>
         </div>
-        <div class="col-xs-12 col-md-1 col-sm-1 col-lg-1 pull-right padding-none">
+        <div class="col-xs-12 col-md-2 col-sm-2 col-lg-2 pull-right padding-none">
             <!-- <input type="button" name="logout" class="btn-danger" style="outline:none;" (click)="logout();" value="Logout"> -->
 
             <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 padding-none">
-                <button mat-icon-button [matMenuTriggerFor]="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Setting
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" (click)="logout();">Logout </a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
                     <mat-icon>more_vert</mat-icon>
                   </button>
-                  <mat-menu #menu="matMenu">
+                <mat-menu #menu="matMenu">
                     <button mat-menu-item>
                       <mat-icon>dialpad</mat-icon>
                       <span>Redial</span>
@@ -72,11 +91,11 @@
                       <mat-icon>voicemail</mat-icon>
                       <span>Check voicemail</span>
                     </button>
-                    <button mat-menu-item class="btn-danger"  (click)="logout();">
+                    <button mat-menu-item class="btn-danger" (click)="logout();">
                       <mat-icon>Logout</mat-icon>
                       <span>Logout</span>
                     </button>
-                  </mat-menu>
+                </mat-menu> -->
             </div>
 
         </div>

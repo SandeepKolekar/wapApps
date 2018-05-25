@@ -38,3 +38,7 @@ li {
 .navbar-user-name {
     padding-right: 50px;
 }
+
+.dropdown-menu {
+    cursor: pointer;
+}

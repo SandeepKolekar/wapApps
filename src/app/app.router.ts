@@ -17,6 +17,8 @@ import { DataTable2Component } from './data-table2/data-table2.component';
 import { SteppersComponent } from './steppers/steppers.component';
 import { TabComponent } from './tab/tab.component';
 import { DecoratorComponent } from './decorator/decorator.component';
+import { HttpDataTableComponent } from './http-data-table/http-data-table.component';
+import { JqwidgetsChartsComponent } from './jqwidgets-charts/jqwidgets-charts.component';
 
 const dashRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent , canActivate: [AuthTokenGuard]},
@@ -26,10 +28,14 @@ const dashRoutes: Routes = [
     { path: 'formsDemo1', component: Form2Component , canActivate: [AuthTokenGuard]},
     { path: 'dataTable1', component: DataTable1Component , canActivate: [AuthTokenGuard]},
     { path: 'dataTable2', component: DataTable2Component , canActivate: [AuthTokenGuard]},
+    { path: 'httpDataTable', component: HttpDataTableComponent , canActivate: [AuthTokenGuard]},
     { path: 'steppers', component: SteppersComponent , canActivate: [AuthTokenGuard]},
     { path: 'tab', component: TabComponent , canActivate: [AuthTokenGuard]},
     { path: 'httpDemo', component: HttpDemoComponent, canActivate: [AuthTokenGuard]},
     { path: 'decorator', component: DecoratorComponent, canActivate: [AuthTokenGuard]},
+    { path: 'jqwidgetsCharts', component: JqwidgetsChartsComponent, canActivate: [AuthTokenGuard]},
+
+    
     { path: '**', redirectTo: 'dashboard' }
 ];
 
