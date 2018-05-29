@@ -36,10 +36,9 @@ import { DecoratorComponent } from './decorator/decorator.component';
 import { HttpDataTableComponent } from './http-data-table/http-data-table.component';
 import { jqxBarGaugeComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxbargauge';
 import { jqxChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxchart';
-import { jqxBulletChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxbulletchart';
-
 import { JqwidgetsChartsComponent } from './jqwidgets-charts/jqwidgets-charts.component';
 import { CommonModule } from '@angular/common';
+import { LineJqwidgetsChartComponent } from './line-jqwidgets-chart/line-jqwidgets-chart.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +67,9 @@ import { CommonModule } from '@angular/common';
     DecoratorComponent,
     HttpDataTableComponent,
     JqwidgetsChartsComponent,
-    jqxBarGaugeComponent 
+    jqxBarGaugeComponent ,
+    jqxChartComponent,
+    LineJqwidgetsChartComponent
   ],
   entryComponents: [
     ForgotPassword

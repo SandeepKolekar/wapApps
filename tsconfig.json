@@ -18,7 +18,9 @@
   },
 
    "files": [ "src/app/app.module.ts" ,
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxbargauge.ts"],
+    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxbargauge.ts",
+    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxchart.ts"
+  ],
     "include": [ "**/*" ] 
 }
   
