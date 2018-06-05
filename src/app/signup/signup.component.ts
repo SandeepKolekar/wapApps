@@ -20,6 +20,9 @@ import {
 })
 export class SignupComponent implements OnInit {
 
+  minDate = new Date(1950, 0, 1);
+  maxDate = new Date();
+
 
   private signup: FormGroup;
   constructor(

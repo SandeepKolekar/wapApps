@@ -39,6 +39,13 @@ import { jqxChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxcha
 import { JqwidgetsChartsComponent } from './jqwidgets-charts/jqwidgets-charts.component';
 import { CommonModule } from '@angular/common';
 import { LineJqwidgetsChartComponent } from './line-jqwidgets-chart/line-jqwidgets-chart.component';
+import { BasicExpansionPanelComponent } from '../basic-expansion-panel/basic-expansion-panel.component';
+import { GridListComponent } from '../grid-list/grid-list.component';
+import { TreeComponent } from '../tree/tree.component';
+import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import { SnackbarComponent } from './snackbar/snackbar.component';
+import { ToolTipComponent } from './tool-tip/tool-tip.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +76,14 @@ import { LineJqwidgetsChartComponent } from './line-jqwidgets-chart/line-jqwidge
     JqwidgetsChartsComponent,
     jqxBarGaugeComponent ,
     jqxChartComponent,
-    LineJqwidgetsChartComponent
+    LineJqwidgetsChartComponent,
+    BasicExpansionPanelComponent,
+    GridListComponent,
+    TreeComponent,
+    BottomSheetComponent,
+    DialogBoxComponent,
+    SnackbarComponent,
+    ToolTipComponent
   ],
   entryComponents: [
     ForgotPassword

@@ -37,6 +37,7 @@
 }
 
 .panel-body {
+    /* margin-bottom: 15px; */
     padding: 15px 15px 0 15px;
 }
 
@@ -50,16 +51,6 @@
     visibility: visible;
 }
 
-.form-control {
-    padding: 1px;
-    border-radius: 0;
-    font-size: 13px;
-}
-
 .pull-right {
     float: right;
-}
-
-mat-chip {
-    max-width: 200px;
 }

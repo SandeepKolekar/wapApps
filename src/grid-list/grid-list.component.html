@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="mainbox col-md-12 col-sm-12 col-xs-12 center">
+        <div class="panel">
+            <!--Page Title  -->
+            <div class="login-panel">
+                <div class="panel-title">
+                    <span> Grid List View</span>
+                    <span class=" pull-right">
+                            <span class="closePageIcon dashBoradCountOnHover" (click)="closePage();">
+                                <i class=" fa fa-times" aria-hidden="true"></i>
+                            </span>
+                    </span>
+                </div>
+            </div>
+            <div class="panel-body">
+
+
+                <mat-grid-list cols="4" rowHeight="100px">
+                    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+                        {{tile.text}}
+                    </mat-grid-tile>
+                </mat-grid-list>
+
+            </div>
+        </div>
+    </div>
+</div>

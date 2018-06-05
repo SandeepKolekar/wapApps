@@ -26,7 +26,15 @@ import {
   MatSlideToggleModule,
   MatRadioModule,
   MatSortModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatExpansionModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatTreeModule,
+  MatButtonToggleModule,
+  MatBadgeModule,
+  MatChipsModule,
+  MatBottomSheetModule
 } from '@angular/material';
 const materialModules = [
   MatButtonModule,
@@ -53,7 +61,15 @@ const materialModules = [
   MatSlideToggleModule,
   MatRadioModule,
   MatSortModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatExpansionModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatTreeModule,
+  MatButtonToggleModule,
+  MatBadgeModule,
+  MatChipsModule,
+  MatBottomSheetModule
 ];
 
 @NgModule({

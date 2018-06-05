@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import {FormControl} from '@angular/forms';
-
 import {Observable} from 'rxjs';
 import {startWith} from 'rxjs/operators';
 import {map} from 'rxjs/operators';
@@ -17,6 +15,30 @@ export class State {
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit {
+
+  startDate = new Date(1990, 0, 1);
+  minDate = new Date(2000, 0, 1);
+  maxDate = new Date(2020, 0, 1);
+  myFilter = (d: Date): boolean => {
+    const day = d.getDay();
+    // Prevent Saturday and Sunday from being selected.
+    return day !== 0 && day !== 6;
+  }
+
+  events: string[] = [];
+
+  // addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+  //   this.events.push(`${type}: ${event.value}`);
+  // }
+
+  color: string;
+
+  availableColors = [
+    { name: 'none', color: '' },
+    { name: 'Primary', color: 'primary' },
+    { name: 'Accent', color: 'accent' },
+    { name: 'Warn', color: 'warn' }
+  ];
 
 
   constructor(private router: Router) {
