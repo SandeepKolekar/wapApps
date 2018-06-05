@@ -83,6 +83,7 @@
                         <mat-icon matSuffix (click)="confirmPasswordHide = !confirmPasswordHide">{{ confirmPasswordHide ? 'visibility' : 'visibility_off'}}</mat-icon>
                         <mat-error *ngIf="!signup.controls.confirmPassword.valid">{{signup.controls.confirmPassword.errors.len}}</mat-error>
                         <mat-error *ngIf="!signup.controls.confirmPassword.valid">{{signup.controls.confirmPassword.errors.ers}}</mat-error>
+                        <mat-error *ngIf="signup.controls.confirmPassword.errors?.MatchPassword">{{signup.controls.confirmPassword.errors?.errorMsg}}</mat-error>
                     </mat-form-field>
                 </div>
             </div>

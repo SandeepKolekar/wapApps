@@ -22,11 +22,22 @@ export class SignupComponent implements OnInit {
 
   minDate = new Date(1950, 0, 1);
   maxDate = new Date();
+  // Match Password
+  static MatchPassword(AC: AbstractControl) {
+    let password = AC.get('password').value; // to get value in input tag
+    let confirmPassword = AC.get('confirmPassword').value; // to get value in input tag
+     if(password != confirmPassword) {
+         AC.get('confirmPassword').setErrors( {MatchPassword: true , errorMsg:'Password not matched'} )
+     } else {
+         return null
+     }
+ }
 
   private signup: FormGroup;
   constructor(
     private router: Router,
     private signupGroup: FormBuilder
+
   ) {
     this.signup = signupGroup.group({
       firstName: ['', Validators.compose([
@@ -53,7 +64,10 @@ export class SignupComponent implements OnInit {
 
       password: ['', Validators.compose([Validators.required, this.passwordCheck1, this.passwordCheck2])],
       confirmPassword: ['', Validators.compose([Validators.required, this.confirmPasswordCheck1, this.confirmPasswordCheck2])]
-    });
+    },{
+    validator: SignupComponent.MatchPassword // your validation method
+    }
+  );
   }
 
 
