@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {FormControl} from '@angular/forms';
+import {TooltipPosition} from '@angular/material';
 @Component({
   selector: 'app-tool-tip',
   templateUrl: './tool-tip.component.html',
@@ -15,5 +17,8 @@ export class ToolTipComponent implements OnInit {
   closePage(){
     this.router.navigate(['home/dashboard']);
   }
+
+  positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
+  position = new FormControl(this.positionOptions[0]);
 
 }

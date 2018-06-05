@@ -42,9 +42,9 @@ import { LineJqwidgetsChartComponent } from './line-jqwidgets-chart/line-jqwidge
 import { BasicExpansionPanelComponent } from '../basic-expansion-panel/basic-expansion-panel.component';
 import { GridListComponent } from '../grid-list/grid-list.component';
 import { TreeComponent } from '../tree/tree.component';
-import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
-import { DialogBoxComponent } from './dialog-box/dialog-box.component';
-import { SnackbarComponent } from './snackbar/snackbar.component';
+import { BottomSheetComponent, BottomSheetOverviewExampleSheet } from './bottom-sheet/bottom-sheet.component';
+import { DialogBoxComponent, DialogOverviewExampleDialog } from './dialog-box/dialog-box.component';
+import { SnackbarComponent, PizzaPartyComponent } from './snackbar/snackbar.component';
 import { ToolTipComponent } from './tool-tip/tool-tip.component';
 
 @NgModule({
@@ -83,10 +83,16 @@ import { ToolTipComponent } from './tool-tip/tool-tip.component';
     BottomSheetComponent,
     DialogBoxComponent,
     SnackbarComponent,
-    ToolTipComponent
+    ToolTipComponent,
+    BottomSheetOverviewExampleSheet,
+    PizzaPartyComponent,
+    DialogOverviewExampleDialog
   ],
   entryComponents: [
-    ForgotPassword
+    ForgotPassword,
+    BottomSheetOverviewExampleSheet,
+    PizzaPartyComponent,
+    DialogOverviewExampleDialog
 ],
   imports: [NgbModule,
     BrowserModule,
