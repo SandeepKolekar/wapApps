@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { AuthServiceService } from '../auth-service/auth-service.service';
-
+import { SidebarMenuComponent } from '../sidebar-menu/sidebar-menu.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

@@ -46,6 +46,7 @@ import { BottomSheetComponent, BottomSheetOverviewExampleSheet } from './bottom-
 import { DialogBoxComponent, DialogOverviewExampleDialog } from './dialog-box/dialog-box.component';
 import { SnackbarComponent, PizzaPartyComponent } from './snackbar/snackbar.component';
 import { ToolTipComponent } from './tool-tip/tool-tip.component';
+import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { ToolTipComponent } from './tool-tip/tool-tip.component';
     ToolTipComponent,
     BottomSheetOverviewExampleSheet,
     PizzaPartyComponent,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialog,
+    SidebarMenuComponent
   ],
   entryComponents: [
     ForgotPassword,
