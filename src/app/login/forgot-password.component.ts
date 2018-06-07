@@ -45,6 +45,10 @@ export class ForgotPassword implements OnInit {
       this.dialogRef.close();
     }
 
+    closePage(){
+      this.dialogRef.close();
+    }
+  
 
   onNoClick(): void {
     this.dialogRef.close();
