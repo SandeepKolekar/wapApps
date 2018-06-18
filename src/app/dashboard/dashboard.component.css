@@ -97,3 +97,11 @@ a {
     font-size: 30px;
     font-family: Verdana;
 }
+
+.dashboard-count-box {
+    margin: 20px 0 0 0;
+}
+
+.panel-heading {
+    padding: 10px 30px;
+}

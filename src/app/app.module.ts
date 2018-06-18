@@ -47,6 +47,7 @@ import { DialogBoxComponent, DialogOverviewExampleDialog } from './dialog-box/di
 import { SnackbarComponent, PizzaPartyComponent } from './snackbar/snackbar.component';
 import { ToolTipComponent } from './tool-tip/tool-tip.component';
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
+import localeFrExtra from '@angular/common/locales/extra/fr';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,7 @@ import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
     HttpClientModule,
       CommonModule
   ],
-  providers: [GlobalService, AuthServiceService, HttpService, AuthTokenGuard],
+  providers: [GlobalService, AuthServiceService, HttpService, AuthTokenGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
