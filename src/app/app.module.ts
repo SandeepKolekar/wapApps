@@ -48,6 +48,8 @@ import { SnackbarComponent, PizzaPartyComponent } from './snackbar/snackbar.comp
 import { ToolTipComponent } from './tool-tip/tool-tip.component';
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import localeFrExtra from '@angular/common/locales/extra/fr';
+import { WeatherService } from './weather.service';
+import { ChartjsComponent } from './chartjs/chartjs.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +91,8 @@ import localeFrExtra from '@angular/common/locales/extra/fr';
     BottomSheetOverviewExampleSheet,
     PizzaPartyComponent,
     DialogOverviewExampleDialog,
-    SidebarMenuComponent
+    SidebarMenuComponent,
+    ChartjsComponent
   ],
   entryComponents: [
     ForgotPassword,
@@ -107,7 +110,7 @@ import localeFrExtra from '@angular/common/locales/extra/fr';
     HttpClientModule,
       CommonModule
   ],
-  providers: [GlobalService, AuthServiceService, HttpService, AuthTokenGuard ],
+  providers: [GlobalService, AuthServiceService, HttpService, AuthTokenGuard,WeatherService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

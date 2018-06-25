@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="mainbox col-md-12 col-sm-12 col-xs-12 center">
+        <div class="panel">
+            <!--Page Title  -->
+            <div class="login-panel">
+                <div class="panel-title">
+                    <span>Chart Js</span>
+                    <span class=" pull-right">
+                      <span class="closePageIcon dashBoradCountOnHover" (click)="closePage();">
+                          <i class=" fa fa-times" aria-hidden="true"></i>
+                      </span>
+                    </span>
+                </div>
+            </div>
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <mat-card>
+                            <canvas id="canvas">{{ chart }}</canvas>
+                        </mat-card>
+                    </div>
+                    <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <mat-card>
+                            <canvas id="barchart"></canvas>
+                        </mat-card>
+                    </div>
+                    <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <mat-card>
+                            <canvas id="horizontalBarChart"></canvas>
+                        </mat-card>
+                    </div>
+                    <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <mat-card>
+                            <canvas id="pieChart"></canvas>
+                        </mat-card>
+                    </div>
+                    <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <mat-card>
+                            <canvas id="doughnutChart"></canvas>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

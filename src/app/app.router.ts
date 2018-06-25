@@ -26,6 +26,7 @@ import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { ToolTipComponent } from './tool-tip/tool-tip.component';
+import { ChartjsComponent } from './chartjs/chartjs.component';
 
 const dashRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent , canActivate: [AuthTokenGuard]},
@@ -48,6 +49,7 @@ const dashRoutes: Routes = [
     { path: 'httpDemo', component: HttpDemoComponent, canActivate: [AuthTokenGuard]},
     { path: 'decorator', component: DecoratorComponent, canActivate: [AuthTokenGuard]},
     { path: 'jqwidgetsCharts', component: JqwidgetsChartsComponent, canActivate: [AuthTokenGuard]},
+    { path: 'chartjs', component: ChartjsComponent, canActivate: [AuthTokenGuard]},
     { path: '**', redirectTo: 'dashboard' }
 ];
 

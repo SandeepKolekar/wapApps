@@ -1,0 +1,68 @@
+.mainbox {
+    margin-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    box-shadow: 0px -3px 20px -5px gray;
+}
+
+.panel {
+    border: 2px solid #25778b !important;
+}
+
+.login-panel {
+    background-color: #25778b !important;
+    color: #fff;
+}
+
+.closePageIcon {
+    background-color: #c9302c;
+    font-size: 19px;
+    color: white;
+    padding: 0px 10px;
+}
+
+.dashBoradCountOnHover:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.panel-title {
+    padding: 4px 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.panel-body {
+    /* margin-bottom: 15px; */
+    padding: 15px 15px 0 15px;
+}
+
+.none-margin-table {
+    margin-bottom: 0;
+}
+
+.scrollbox-content,
+.scrollbox:hover,
+.scrollbox:focus {
+    visibility: visible;
+}
+
+.pull-right {
+    float: right;
+}
+
+.col {
+    margin-bottom: 10px;
+}
+
+.panel-body {
+    background-color: #e9ecf5;
+}
