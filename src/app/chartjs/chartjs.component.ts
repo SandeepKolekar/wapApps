@@ -5,7 +5,7 @@ import { Chart } from 'chart.js';
 @Component({
   selector: 'app-chartjs',
   templateUrl: './chartjs.component.html',
-  styleUrls: ['./chartjs.component.css']
+  styleUrls: ['./chartjs.component.less']
 })
 export class ChartjsComponent implements OnInit {
 

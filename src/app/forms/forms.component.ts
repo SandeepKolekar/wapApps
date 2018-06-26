@@ -12,7 +12,7 @@ export class State {
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
-  styleUrls: ['./forms.component.css']
+  styleUrls: ['./forms.component.less']
 })
 export class FormsComponent implements OnInit {
 

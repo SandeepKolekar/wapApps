@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-chat-bot',
   templateUrl: './chat-bot.component.html',
-  styleUrls: ['./chat-bot.component.css']
+  styleUrls: ['./chat-bot.component.less']
 })
 export class ChatBotComponent implements OnInit {
   chatData = [];

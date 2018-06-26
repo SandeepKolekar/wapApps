@@ -4,7 +4,7 @@ import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
 @Component({
   selector: 'app-bottom-sheet',
   templateUrl: './bottom-sheet.component.html',
-  styleUrls: ['./bottom-sheet.component.css']
+  styleUrls: ['./bottom-sheet.component.less']
 })
 
 

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-unauthorized-source',
   templateUrl: './unauthorized-source.component.html',
-  styleUrls: ['./unauthorized-source.component.css']
+  styleUrls: ['./unauthorized-source.component.less']
 })
 export class UnauthorizedSourceComponent implements OnInit {
 

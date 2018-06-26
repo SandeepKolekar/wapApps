@@ -4,7 +4,7 @@ import { LineJqwidgetsChartComponent } from '../line-jqwidgets-chart/line-jqwidg
 @Component({
   selector: 'app-jqwidgets-charts',
   templateUrl: './jqwidgets-charts.component.html',
-  styleUrls: ['./jqwidgets-charts.component.css']
+  styleUrls: ['./jqwidgets-charts.component.less']
 })
 export class JqwidgetsChartsComponent implements OnInit {
   values: number[] = [102, 115, 130, 137];

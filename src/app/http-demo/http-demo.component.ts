@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-http-demo',
   templateUrl: './http-demo.component.html',
-  styleUrls: ['./http-demo.component.css']
+  styleUrls: ['./http-demo.component.less']
 })
 export class HttpDemoComponent implements OnInit {
 

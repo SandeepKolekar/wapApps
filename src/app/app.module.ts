@@ -39,9 +39,9 @@ import { jqxChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxcha
 import { JqwidgetsChartsComponent } from './jqwidgets-charts/jqwidgets-charts.component';
 import { CommonModule } from '@angular/common';
 import { LineJqwidgetsChartComponent } from './line-jqwidgets-chart/line-jqwidgets-chart.component';
-import { BasicExpansionPanelComponent } from '../basic-expansion-panel/basic-expansion-panel.component';
-import { GridListComponent } from '../grid-list/grid-list.component';
-import { TreeComponent } from '../tree/tree.component';
+import { BasicExpansionPanelComponent } from './basic-expansion-panel/basic-expansion-panel.component';
+import { GridListComponent } from './grid-list/grid-list.component';
+import { TreeComponent } from './tree/tree.component';
 import { BottomSheetComponent, BottomSheetOverviewExampleSheet } from './bottom-sheet/bottom-sheet.component';
 import { DialogBoxComponent, DialogOverviewExampleDialog } from './dialog-box/dialog-box.component';
 import { SnackbarComponent, PizzaPartyComponent } from './snackbar/snackbar.component';

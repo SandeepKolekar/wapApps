@@ -5,7 +5,7 @@ import {TooltipPosition} from '@angular/material';
 @Component({
   selector: 'app-tool-tip',
   templateUrl: './tool-tip.component.html',
-  styleUrls: ['./tool-tip.component.css']
+  styleUrls: ['./tool-tip.component.less']
 })
 export class ToolTipComponent implements OnInit {
 

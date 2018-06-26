@@ -16,7 +16,7 @@ import {
 @Component({
   selector: 'forgot-password',
   templateUrl: './forgot-password.component.html',
-  styleUrls: ['./forgot-password.component.css']
+  styleUrls: ['./forgot-password.component.less']
 })
 export class ForgotPassword implements OnInit {
   private forgotPassword: FormGroup;

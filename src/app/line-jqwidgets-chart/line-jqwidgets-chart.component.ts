@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-line-jqwidgets-chart',
   templateUrl: './line-jqwidgets-chart.component.html',
-  styleUrls: ['./line-jqwidgets-chart.component.css']
+  styleUrls: ['./line-jqwidgets-chart.component.less']
 })
 export class LineJqwidgetsChartComponent implements OnInit {
 

@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-data-table2',
   templateUrl: './data-table2.component.html',
-  styleUrls: ['./data-table2.component.css']
+  styleUrls: ['./data-table2.component.less']
 })
 export class DataTable2Component implements OnInit {
 

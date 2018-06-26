@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-http-data-table',
   templateUrl: './http-data-table.component.html',
-  styleUrls: ['./http-data-table.component.css']
+  styleUrls: ['./http-data-table.component.less']
 })
 export class HttpDataTableComponent implements OnInit {
   displayedColumns = ['created', 'state', 'number', 'title'];

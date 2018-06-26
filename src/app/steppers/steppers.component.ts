@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-steppers',
   templateUrl: './steppers.component.html',
-  styleUrls: ['./steppers.component.css']
+  styleUrls: ['./steppers.component.less']
 })
 export class SteppersComponent implements OnInit {
 

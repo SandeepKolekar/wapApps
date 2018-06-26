@@ -21,9 +21,9 @@
                             "src/favicon.ico"
                         ],
                         "styles": [
-                            "src/styles.css",
-                            "src/common-lib/css/bootstrap.min.css",
-                            "node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.css"
+                            "src/less/styles.less",
+                            "src/common-lib/css/bootstrap.min.less",
+                            "node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.less"
                         ],
                         "scripts": [
                             "node_modules/jquery/dist/jquery.min.js",
@@ -83,9 +83,9 @@
                             "src/common-lib/js/popper.min.js"
                         ],
                         "styles": [
-                            "src/styles.css",
-                            "src/common-lib/css/bootstrap.min.css",
-                            "src/node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.css"
+                            "src/less/styles.less",
+                            "src/common-lib/css/bootstrap.min.less",
+                            "src/node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.less"
                         ],
                         "assets": [
                             "src/assets",
@@ -137,7 +137,7 @@
     "schematics": {
         "@schematics/angular:component": {
             "prefix": "app",
-            "styleext": "css"
+            "styleext": "less"
         },
         "@schematics/angular:directive": {
             "prefix": "app"

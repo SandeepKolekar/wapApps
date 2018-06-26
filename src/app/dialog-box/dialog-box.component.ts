@@ -4,7 +4,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 @Component({
   selector: 'app-dialog-box',
   templateUrl: './dialog-box.component.html',
-  styleUrls: ['./dialog-box.component.css']
+  styleUrls: ['./dialog-box.component.less']
 })
 export class DialogBoxComponent implements OnInit {
 

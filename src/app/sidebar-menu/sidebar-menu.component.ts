@@ -6,7 +6,7 @@ import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 @Component({
   selector: 'app-sidebar-menu',
   templateUrl: './sidebar-menu.component.html',
-  styleUrls: ['./sidebar-menu.component.css']
+  styleUrls: ['./sidebar-menu.component.less']
 })
 export class SidebarMenuComponent implements OnDestroy {
   mobileQuery: MediaQueryList;

@@ -16,7 +16,7 @@ function memberLog(target , name , descriptor) {
 @Component({
   selector: 'app-decorator',
   templateUrl: './decorator.component.html',
-  styleUrls: ['./decorator.component.css']
+  styleUrls: ['./decorator.component.less']
 })
 export class DecoratorComponent implements OnInit {
 
