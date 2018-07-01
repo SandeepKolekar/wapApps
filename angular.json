@@ -22,8 +22,8 @@
                         ],
                         "styles": [
                             "src/less/styles.less",
-                            "src/common-lib/css/bootstrap.min.less",
-                            "node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.less"
+                            "src/common-lib/css/bootstrap.min.css",
+                            "node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.css"
                         ],
                         "scripts": [
                             "node_modules/jquery/dist/jquery.min.js",

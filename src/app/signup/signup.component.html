@@ -4,10 +4,10 @@
             <!--Page Title  -->
             <div class="login-panel box-header">
                 <div class="panel-title">
-                    <span>Sign Up</span>
+                    <span>{{ 'LBL_SIGNUP' | translate }}</span>
                     <span class=" pull-right">
                     <span class="dashBoradCountOnHover"  [routerLink]="['/login']">
-                        Login
+                        {{'LBL_LOGIN' | translate }}
                     </span>
                     </span>
                 </div>
@@ -20,70 +20,94 @@
                             <!-- First Name -->
                             <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4 input-group-box">
                                 <mat-form-field class="input-full-width">
-                                    <input matInput required type="text" formControlName="firstName" name="firstName" placeholder="First name">
-                                    <mat-error *ngIf="!signup.controls.firstName.valid && signup.controls.firstName.value ">Invalid First name.</mat-error>
-                                    <mat-error *ngIf="!signup.controls.firstName.value">Required First name.</mat-error>
+                                    <input matInput required type="text" formControlName="firstName" name="firstName" placeholder="{{'PLC_FIRST_NAME' | translate }}">
+                                    <mat-error *ngIf="!signup.controls.firstName.valid && signup.controls.firstName.value ">
+                                        {{'ERR_INVALID_FIRST_NAME' | translate }}
+                                    </mat-error>
+                                    <mat-error *ngIf="!signup.controls.firstName.value">
+                                        {{'ERR_REQUIRED_FIRST_NAME' | translate }}
+                                    </mat-error>
                                 </mat-form-field>
                             </div>
                             <!-- Middle Name -->
                             <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4 input-group-box">
                                 <mat-form-field class="input-full-width">
-                                    <input matInput required type="text" formControlName="middleName" name="middleName" placeholder="Middle name">
-                                    <mat-error *ngIf="!signup.controls.middleName.valid && signup.controls.middleName.value">Invalid Middle name.</mat-error>
-                                    <mat-error *ngIf="!signup.controls.middleName.value">Required Middle name.</mat-error>
+                                    <input matInput required type="text" formControlName="middleName" name="middleName" placeholder="{{'PLC_MIDDLE_NAME' | translate }}">
+                                    <mat-error *ngIf="!signup.controls.middleName.valid && signup.controls.middleName.value">
+                                        {{'ERR_INVALID_MIDDLE_NAME' | translate }}
+                                    </mat-error>
+                                    <mat-error *ngIf="!signup.controls.middleName.value">
+                                        {{'ERR_REQUIRED_MIDDLE_NAME' | translate }}
+                                    </mat-error>
                                 </mat-form-field>
                             </div>
                             <!-- Last Name -->
                             <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4 input-group-box">
                                 <mat-form-field class="input-full-width">
-                                    <input matInput required type="text" formControlName="lastName" name="lastName" placeholder="Last name">
-                                    <mat-error *ngIf="!signup.controls.lastName.valid && signup.controls.lastName.value">Invalid Last name.</mat-error>
-                                    <mat-error *ngIf="!signup.controls.lastName.value">Required Last name.</mat-error>
+                                    <input matInput required type="text" formControlName="lastName" name="lastName" placeholder="{{'PLC_LAST_NAME' | translate }}">
+                                    <mat-error *ngIf="!signup.controls.lastName.valid && signup.controls.lastName.value">
+                                        {{'ERR_INVALID_LAST_NAME' | translate }}
+                                    </mat-error>
+                                    <mat-error *ngIf="!signup.controls.lastName.value">
+                                        {{'ERR_REQUIRED_LAST_NAME' | translate }}
+                                    </mat-error>
                                 </mat-form-field>
                             </div>
                             <!-- Email -->
                             <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4 input-group-box">
                                 <mat-form-field class="input-full-width">
-                                    <input matInput required type="text" formControlName="email" name="email" placeholder="Email">
-                                    <mat-error *ngIf="!signup.controls.email.valid && signup.controls.email.value">Invalid Email ID</mat-error>
-                                    <mat-error *ngIf="!signup.controls.email.value">Required Email ID.</mat-error>
+                                    <input matInput required type="text" formControlName="email" name="email" placeholder="{{'PLC_EMAIL_ID' | translate }}">
+                                    <mat-error *ngIf="!signup.controls.email.valid && signup.controls.email.value">
+                                        {{'ERR_INVALID_EMAIL_ID' | translate }}
+                                    </mat-error>
+                                    <mat-error *ngIf="!signup.controls.email.value">
+                                        {{'ERR_REQUIRED_EMAIL_ID' | translate }}
+                                    </mat-error>
                                 </mat-form-field>
                             </div>
                             <!-- Contact no -->
                             <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4 input-group-box">
                                 <mat-form-field class="input-full-width" hintLabel="Contact No.should be 10 Digits">
-                                    <input matInput required #contactNo maxlength="10" minlength="10" type="text" formControlName="contactNo" name="contactNo" placeholder="Contact No">
+                                    <input matInput required #contactNo maxlength="10" minlength="10" type="text" formControlName="contactNo" name="contactNo" placeholder="{{'PLC_CONTACT_NO' | translate }}">
                                     <mat-hint align="end">{{contactNo.value?.length || 0}}/10</mat-hint>
-                                    <mat-error *ngIf="!signup.controls.contactNo.valid && signup.controls.contactNo.value">Invalid Contact No.</mat-error>
-                                    <mat-error *ngIf="!signup.controls.contactNo.value">Required Contact No.</mat-error>
+                                    <mat-error *ngIf="!signup.controls.contactNo.valid && signup.controls.contactNo.value">
+                                        {{'ERR_INVALID_CONTACT_NO' | translate }}
+                                    </mat-error>
+                                    <mat-error *ngIf="!signup.controls.contactNo.value">
+                                        {{'ERR_REQUIRED_CONTACT_NO' | translate }}
+                                    </mat-error>
                                 </mat-form-field>
                             </div>
                             <!-- Gender-->
                             <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4 input-group-box">
                                 <mat-form-field>
-                                    <mat-select required placeholder="Gender" formControlName="gender" name="gender">
+                                    <mat-select required placeholder="{{'PLC_GENDER' | translate }}" formControlName="gender" name="gender">
                                         <mat-option *ngFor="let genderDto of gender" [value]="genderDto.code">
                                             {{genderDto.value }}
                                         </mat-option>
                                     </mat-select>
-                                    <mat-error *ngIf="!signup.controls.gender.valid">Required Gender</mat-error>
+                                    <mat-error *ngIf="!signup.controls.gender.valid">
+                                        {{'ERR_REQUIRED_GENDER' | translate }}
+                                    </mat-error>
                                 </mat-form-field>
                             </div>
 
                             <!-- Date of birth -->
                             <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4 input-group-box">
                                 <mat-form-field class="example-full-width">
-                                    <input matInput required [min]="minDate" [max]="maxDate" [matDatepicker]="dob" placeholder="Date Of Birth" formControlName="dob" name="dob" disabled>
+                                    <input matInput required [min]="minDate" [max]="maxDate" [matDatepicker]="dob" placeholder="{{'PLC_DATE_OF_BIRTH' | translate }}" formControlName="dob" name="dob" disabled>
                                     <mat-datepicker-toggle matSuffix [for]="dob"></mat-datepicker-toggle>
                                     <mat-datepicker #dob disabled="false"></mat-datepicker>
-                                    <mat-error *ngIf="!signup.controls.dob.valid">Required Date of Birth</mat-error>
+                                    <mat-error *ngIf="!signup.controls.dob.valid">
+                                        {{'ERR_REQUIRED_DATE_OF_BIRTH' | translate }}
+                                    </mat-error>
                                 </mat-form-field>
                             </div>
 
                             <!-- Password -->
                             <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4 input-group-box">
                                 <mat-form-field class="input-full-width">
-                                    <input matInput required formControlName="password" name="password" placeholder="Password" [type]="! passwordHide ? 'password' : 'text'">
+                                    <input matInput required formControlName="password" name="password" placeholder="{{'PLC_PASSWORD' | translate }}" [type]="! passwordHide ? 'password' : 'text'">
                                     <mat-icon matSuffix (click)="passwordHide = !passwordHide">{{passwordHide ? 'visibility' : 'visibility_off'}}</mat-icon>
                                     <mat-error *ngIf="!signup.controls.password.valid">{{signup.controls.password.errors.len}}</mat-error>
                                     <mat-error *ngIf="!signup.controls.password.valid">{{signup.controls.password.errors.ers}}</mat-error>
@@ -92,7 +116,7 @@
                             <!-- Confirm password -->
                             <div class=" col col-xs-12 col-sm-6 col-md-4 col-lg-4 input-group-box">
                                 <mat-form-field class="input-full-width">
-                                    <input matInput required formControlName="confirmPassword" name="pass" placeholder="Confirm Password" [type]="!confirmPasswordHide ? 'password' : 'text'">
+                                    <input matInput required formControlName="confirmPassword" name="pass" placeholder="{{'PLC_CONFIRM_PASSWORD' | translate }}" [type]="!confirmPasswordHide ? 'password' : 'text'">
                                     <mat-icon matSuffix (click)="confirmPasswordHide = !confirmPasswordHide">{{ confirmPasswordHide ? 'visibility' : 'visibility_off'}}</mat-icon>
                                     <mat-error *ngIf="!signup.controls.confirmPassword.valid">{{signup.controls.confirmPassword.errors.len}}</mat-error>
                                     <mat-error *ngIf="!signup.controls.confirmPassword.valid">{{signup.controls.confirmPassword.errors.ers}}</mat-error>
@@ -101,7 +125,9 @@
                             </div>
 
                             <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <button mat-raised-button color="primary" class="btn btn-primary" name="Submit" value="signUp" type="Submit" [disabled]="!signup.valid" value="SignUp">Sign Up</button>
+                                <button mat-raised-button color="primary" class="btn btn-primary" name="Submit" value="signUp" type="Submit" [disabled]="!signup.valid" value="SignUp">
+                                    {{ 'LBL_SIGNUP' | translate }}
+                                </button>
                             </div>
                         </div>
                     </form>

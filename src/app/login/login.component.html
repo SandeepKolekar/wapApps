@@ -1,17 +1,28 @@
-<!-- <div class="container-fluid"> -->
+ <!-- Set Language-->
+ <div class="col col-xs-12 col-sm-2 col-md-2 col-lg-2 pull-right lang">
+    <mat-form-field>
+        <mat-select placeholder="Language" name="Language" (keyup)="changeLang();">
+            <mat-option *ngFor="let lang of langList" [value]="lang.code">
+                {{lang.value }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
 <div class="mainbox col-xs-12 col-sm-8 col-md-5 col-lg-4 center">
     <div class="panel">
         <!--Page Title  -->
         <div class="login-panel box-header">
             <div class="panel-title">
-                <span>Welcome Back! Please Sign In</span>
+                <span>{{ 'LBL_WELCOME_MSG' | translate }}</span>
                 <span class=" pull-right">
                         <a class="dashBoradCountOnHover"  [routerLink]="['/signup']">
-                            Signup
+                            {{ 'LBL_SIGNUP' | translate }}
                         </a>
                 </span>
             </div>
         </div>
+
         <div class="panel-body">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <form novalidate [formGroup]="fg" (ngSubmit)="doLogin()">
@@ -19,22 +30,30 @@
                         <!-- User name-->
                         <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 input-group-box">
                             <mat-form-field class="input-full-width">
-                                <input matInput type="text" formControlName="userName" name="userName" placeholder="User Name" />
-                                <mat-error *ngIf="!fg.controls.userName.valid">Username Required.</mat-error>
+                                <input matInput type="text" formControlName="userName" name="userName" placeholder="{{'PLC_USERNAME' | translate:param }}" />
+                                <mat-error *ngIf="!fg.controls.userName.valid">
+                                    {{'ERR_REQUIRED_USERNAME' | translate }}
+                                </mat-error>
                             </mat-form-field>
                         </div>
                         <!-- Password -->
                         <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 input-group-box">
                             <mat-form-field class="input-full-width">
-                                <input matInput type="password" formControlName="password" (keyup)="usernameChange();" name="Password" placeholder="Password" />
-                                <mat-error *ngIf="!fg.controls.password.valid">Password Required.</mat-error>
+                                <input matInput type="password" formControlName="password" (keyup)="usernameChange();" name="Password" placeholder="{{'PLC_PASSWORD' | translate:param }}" />
+                                <mat-error *ngIf="!fg.controls.password.valid">
+                                        {{'ERR_REQUIRED_PASSWORD' | translate }}
+                                        </mat-error>
                             </mat-form-field>
                         </div>
 
                         <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 center">
-                            <button mat-raised-button color="primary" class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" [disabled]="!fg.valid" value="Login">Login</button>
+                            <button mat-raised-button color="primary" class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" [disabled]="!fg.valid" value="Login">
+                                {{'LBL_LOGIN' | translate }}
+                            </button>
                             <mat-progress-bar *ngIf="pageLoader" mode="indeterminate"></mat-progress-bar>
-                            <a (click)="openDialog()">Forgot Password</a>
+                            <a (click)="openDialog()">
+                                {{'LBL_FORGOT_PASSWORD' | translate }}
+                            </a>
                         </div>
                     </div>
                 </form>
@@ -42,4 +61,3 @@
         </div>
     </div>
 </div>
-<!-- </div> -->

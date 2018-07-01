@@ -47,9 +47,16 @@ import { DialogBoxComponent, DialogOverviewExampleDialog } from './dialog-box/di
 import { SnackbarComponent, PizzaPartyComponent } from './snackbar/snackbar.component';
 import { ToolTipComponent } from './tool-tip/tool-tip.component';
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
-import localeFrExtra from '@angular/common/locales/extra/fr';
 import { WeatherService } from './weather.service';
 import { ChartjsComponent } from './chartjs/chartjs.component';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { HttpClient} from '@angular/common/http';
+// AoT requires an exported function for factories
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -108,7 +115,14 @@ import { ChartjsComponent } from './chartjs/chartjs.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-      CommonModule
+      CommonModule,
+      TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: (createTranslateLoader),
+          deps: [HttpClient]
+      }
+    })
   ],
   providers: [GlobalService, AuthServiceService, HttpService, AuthTokenGuard,WeatherService ],
   bootstrap: [AppComponent]

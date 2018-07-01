@@ -12,13 +12,15 @@ import {MatDialog} from '@angular/material';
 })
 
 export class LoginComponent {
-
   pageLoader : boolean;
   currentDate: string;
   invalidLogin: boolean;
   url : string;
   private fg: FormGroup;
-
+  langList = [
+    {"code":"en","value":"English"},
+    {"code":"ma","value":"Marathi"}
+  ];
   constructor(
     private router: Router ,
     private authService: AuthServiceService ,
