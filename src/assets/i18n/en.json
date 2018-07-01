@@ -1,9 +1,8 @@
 {
-    "LBL_WELCOME_MSG": "Welcome Back! Please Sign In",
+    "LBL_WELCOME_MSG": "Sign In",
     "LBL_SIGNUP": "SignUp",
     "LBL_LOGIN": "Login",
     "LBL_FORGOT_PASSWORD": "Forgot Password",
-
 
     "PLC_USERNAME": "User Name",
     "PLC_FIRST_NAME": "First Name",

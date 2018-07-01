@@ -1,32 +1,27 @@
  <!-- Set Language-->
  <div class="col col-xs-12 col-sm-2 col-md-2 col-lg-2 pull-right lang">
     <mat-form-field>
-        <mat-select placeholder="Language" name="Language" (keyup)="changeLang();">
+        <mat-select placeholder="Language" name="Language" #selectedLang (keyup)="changeLang(selectedLang.value);">
             <mat-option *ngFor="let lang of langList" [value]="lang.code">
                 {{lang.value }}
             </mat-option>
         </mat-select>
     </mat-form-field>
 </div>
-
+ 
 <div class="mainbox col-xs-12 col-sm-8 col-md-5 col-lg-4 center">
     <div class="panel">
         <!--Page Title  -->
         <div class="login-panel box-header">
             <div class="panel-title">
                 <span>{{ 'LBL_WELCOME_MSG' | translate }}</span>
-                <span class=" pull-right">
-                        <a class="dashBoradCountOnHover"  [routerLink]="['/signup']">
-                            {{ 'LBL_SIGNUP' | translate }}
-                        </a>
-                </span>
             </div>
         </div>
 
         <div class="panel-body">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <form novalidate [formGroup]="fg" (ngSubmit)="doLogin()">
-                    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="row">
                         <!-- User name-->
                         <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 input-group-box">
                             <mat-form-field class="input-full-width">
@@ -51,12 +46,24 @@
                                 {{'LBL_LOGIN' | translate }}
                             </button>
                             <mat-progress-bar *ngIf="pageLoader" mode="indeterminate"></mat-progress-bar>
-                            <a (click)="openDialog()">
-                                {{'LBL_FORGOT_PASSWORD' | translate }}
-                            </a>
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class=" col-xs-12 col-sm-8 col-md-5 col-lg-4 center">
+    <div class="panel">
+        <div class="panel-body">
+            <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6 center">
+                <a (click)="openDialog()">
+                    {{'LBL_FORGOT_PASSWORD' | translate }}
+                </a>
+                <a class="dashBoradCountOnHover"  [routerLink]="['/signup']">
+                    {{ 'LBL_SIGNUP' | translate }}
+                </a>
             </div>
         </div>
     </div>

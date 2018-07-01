@@ -1,0 +1,35 @@
+
+{
+    "LBL_WELCOME_MSG": "परत स्वागत आहे! कृपया साइन इन करा",
+    "LBL_SIGNUP": "साइनअप",
+    "LBL_LOGIN": "लॉग इन",
+    "LBL_FORGOT_PASSWORD": "पासवर्ड विसरला",
+
+
+    "PLC_USERNAME": "वापरकर्ता नाव",
+    "PLC_FIRST_NAME": "पहिले नाव",
+    "PLC_MIDDLE_NAME": "मधले नाव",
+    "PLC_LAST_NAME": "आडनाव",
+    "PLC_EMAIL_ID": "ई - मेल आयडी",
+    "PLC_CONTACT_NO": "संपर्क क्रमांक",
+    "PLC_GENDER": "लिंग",
+    "PLC_DATE_OF_BIRTH": "जन्म तारीख",
+    "PLC_PASSWORD": "पासवर्ड",
+    "PLC_CONFIRM_PASSWORD": "पासवर्डची पुष्टी करा",
+
+    "ERR_INVALID_FIRST_NAME": "Invalid First Name.",
+    "ERR_INVALID_MIDDLE_NAME": "Invalid Middle Name.",
+    "ERR_INVALID_LAST_NAME": "Invalid Last Name.",
+    "ERR_INVALID_EMAIL_ID": "Invalid Email ID.",
+    "ERR_INVALID_CONTACT_NO": "Invalid Contact No.",
+
+    "ERR_REQUIRED_USERNAME": "Required User Name.",
+    "ERR_REQUIRED_FIRST_NAME": "Required First Name.",
+    "ERR_REQUIRED_MIDDLE_NAME": "Required Middle Name.",
+    "ERR_REQUIRED_LAST_NAME": "Required Last Name.",
+    "ERR_REQUIRED_EMAIL_ID": "Required Email ID.",
+    "ERR_REQUIRED_CONTACT_NO": "Required Contact No.",
+    "ERR_REQUIRED_GENDER": "Required Gender.",
+    "ERR_REQUIRED_DATE_OF_BIRTH": "Required Date Of Birth."
+
+}

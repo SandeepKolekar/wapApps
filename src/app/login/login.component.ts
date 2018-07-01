@@ -5,6 +5,7 @@ import { HttpService } from '../http/http.service';
 import { ForgotPassword } from './forgot-password.component';
 import { AsyncValidatorFn,ValidatorFn,FormBuilder,FormGroup,Validators,AbstractControl,ValidationErrors,FormArray,FormControl } from '@angular/forms';
 import {MatDialog} from '@angular/material';
+import {TranslateService} from '@ngx-translate/core';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,22 +18,30 @@ export class LoginComponent {
   invalidLogin: boolean;
   url : string;
   private fg: FormGroup;
-  langList = [
-    {"code":"en","value":"English"},
-    {"code":"ma","value":"Marathi"}
-  ];
+  public translate: TranslateService;
   constructor(
     private router: Router ,
     private authService: AuthServiceService ,
     private HttpService: HttpService,
     private fb: FormBuilder,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    translate: TranslateService
   ) {
     this.fg = fb.group({
       userName: ['', Validators.compose([Validators.required])],
       password: ['', Validators.compose([Validators.required])]
     });
+      translate.setDefaultLang('en');
+      translate.use('en');
   }
+
+  langList = [
+    {"code":"en","value":"English"},
+    {"code":"ma","value":"Marathi"}
+  ];
+  changeLang(selectedLang){
+  }
+
   usernameChange(){
     this.invalidLogin = false ;
   }
