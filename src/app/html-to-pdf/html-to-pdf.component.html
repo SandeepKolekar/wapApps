@@ -1,0 +1,30 @@
+<div id="content" #content>
+    <mat-card>
+        <div>
+            <input type="button" value="Export" (click)="captureScreen()" />
+        </div>
+    </mat-card>
+</div>
+<div>
+    <mat-progress-bar mode="indeterminate" *ngIf="pdfPageloader == true"></mat-progress-bar>
+    <mat-card id="contentToConvert">
+
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Resume</mat-card-title>
+                <mat-card-subtitle>Dog Xyz</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    JavaScript JavaScript is the programming language of HTML and the Web. JavaScript is easy to learn. This tutorial will teach you JavaScript from basic to advanced. Why Study JavaScript? JavaScript is one of the 3 languages all web developers must learn:
+                    1. HTML to define the content of web pages 2. CSS to specify the layout of web pages 3. JavaScript to program the behavior of web pages This tutorial is about JavaScript, and how JavaScript works with HTML and CSS. Did You Know? JavaScript
+                    and Java are completely different languages, both in concept and design. JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997. ECMA-262 is the official name of the standard. ECMAScript is the official
+                    name of the language
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+            </mat-card-actions>
+        </mat-card>
+    </mat-card>
+</div>
