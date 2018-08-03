@@ -27,6 +27,8 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { ToolTipComponent } from './tool-tip/tool-tip.component';
 import { ChartjsComponent } from './chartjs/chartjs.component';
+import { HtmlToPdfComponent } from './html-to-pdf/html-to-pdf.component';
+import { CanlendarTaskComponent } from './canlendar-task/canlendar-task.component';
 
 const dashRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent , canActivate: [AuthTokenGuard]},
@@ -50,6 +52,8 @@ const dashRoutes: Routes = [
     { path: 'decorator', component: DecoratorComponent, canActivate: [AuthTokenGuard]},
     { path: 'jqwidgetsCharts', component: JqwidgetsChartsComponent, canActivate: [AuthTokenGuard]},
     { path: 'chartjs', component: ChartjsComponent, canActivate: [AuthTokenGuard]},
+    { path: 'HtmlToPdf', component: HtmlToPdfComponent, canActivate: [AuthTokenGuard]},
+    { path: 'CanlendarTask', component: CanlendarTaskComponent, canActivate: [AuthTokenGuard]},
     { path: '**', redirectTo: 'dashboard' }
 ];
 

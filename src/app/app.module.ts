@@ -52,6 +52,9 @@ import { ChartjsComponent } from './chartjs/chartjs.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClient} from '@angular/common/http';
+import { HtmlToPdfComponent } from './html-to-pdf/html-to-pdf.component';
+import { CanlendarTaskComponent } from './canlendar-task/canlendar-task.component';
+import { CalendarModule } from 'angular-calendar';
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -99,7 +102,9 @@ export function createTranslateLoader(http: HttpClient) {
     PizzaPartyComponent,
     DialogOverviewExampleDialog,
     SidebarMenuComponent,
-    ChartjsComponent
+    ChartjsComponent,
+    HtmlToPdfComponent,
+    CanlendarTaskComponent
   ],
   entryComponents: [
     ForgotPassword,
@@ -115,14 +120,15 @@ export function createTranslateLoader(http: HttpClient) {
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-      CommonModule,
-      TranslateModule.forRoot({
+    CommonModule,
+    TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
           useFactory: (createTranslateLoader),
           deps: [HttpClient]
       }
-    })
+    }),
+    CalendarModule.forRoot()
   ],
   providers: [GlobalService, AuthServiceService, HttpService, AuthTokenGuard,WeatherService ],
   bootstrap: [AppComponent]

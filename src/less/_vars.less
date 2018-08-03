@@ -1,4 +1,15 @@
 @background-color : blue ;
 @font-color :red;
 
+.mainboxless(@margintop;@padding;@boxshadow) {
+    margin-top: @margintop ;
+    padding : @padding;
+    box-shadow: @boxshadow;
+};
 
+.closepageiconless(@closePagebg; @closePageFontSize; @closePageColor ; @closePagePadding) {
+    background-color: @closePagebg;
+    font-size: @closePageFontSize;
+    color: @closePageColor ;
+    padding:@closePagePadding;
+};  
