@@ -14,13 +14,12 @@
     "PLC_DATE_OF_BIRTH": "Date If Birth",
     "PLC_PASSWORD": "Password",
     "PLC_CONFIRM_PASSWORD": "Confirm Password",
-
     "ERR_INVALID_FIRST_NAME": "Invalid First Name.",
     "ERR_INVALID_MIDDLE_NAME": "Invalid Middle Name.",
     "ERR_INVALID_LAST_NAME": "Invalid Last Name.",
     "ERR_INVALID_EMAIL_ID": "Invalid Email ID.",
     "ERR_INVALID_CONTACT_NO": "Invalid Contact No.",
-
+    "ERR_REQUIRED_PASSWORD":"Required password",
     "ERR_REQUIRED_USERNAME": "Required User Name.",
     "ERR_REQUIRED_FIRST_NAME": "Required First Name.",
     "ERR_REQUIRED_MIDDLE_NAME": "Required Middle Name.",
@@ -29,5 +28,4 @@
     "ERR_REQUIRED_CONTACT_NO": "Required Contact No.",
     "ERR_REQUIRED_GENDER": "Required Gender.",
     "ERR_REQUIRED_DATE_OF_BIRTH": "Required Date Of Birth."
-
 }
