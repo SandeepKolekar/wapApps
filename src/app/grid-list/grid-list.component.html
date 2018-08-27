@@ -19,6 +19,11 @@
                     <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
                         {{tile.text}}
                     </mat-grid-tile>
+                    <mat-grid-tile [colspan]="1" [rowspan]="3">
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="2" [rowspan]="3" [style.border]="'2px solid'+ tiles[1].color">
+                        manisha
+                    </mat-grid-tile>
                 </mat-grid-list>
 
             </div>
