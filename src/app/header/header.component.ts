@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthServiceService } from '../auth-service/auth-service.service';
-
+import { HttpService } from '../http/http.service';
 
 @Component({
   selector: 'app-header',
@@ -13,10 +13,12 @@ export class HeaderComponent implements OnInit {
   userName: string;
   currentRoleName: string;
   getRoleList: any ;
-
+  pageLoader : boolean;
+  sendData:object;
   constructor(
     private router: Router,
-    private authService: AuthServiceService
+    private authService: AuthServiceService,
+    private HttpService: HttpService
   ) { }
 
   ngOnInit() {
@@ -27,7 +29,21 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    this.authService.removeUserData();
-    this.router.navigate(['login']);
+    this.pageLoader = true ;
+    this.sendData = {
+      sendData: '',
+      url: 'login/logout'
+    };
+
+    this.HttpService.post(this.sendData).subscribe(
+      res => { 
+          this.pageLoader = false ;
+          this.authService.removeUserData();
+          this.router.navigate(['login']);
+      } , 
+      error => {
+        this.pageLoader = false ;
+      }
+    ); 
   }
 }

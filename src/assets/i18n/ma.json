@@ -4,8 +4,6 @@
     "LBL_SIGNUP": "साइनअप",
     "LBL_LOGIN": "लॉग इन",
     "LBL_FORGOT_PASSWORD": "पासवर्ड विसरला",
-
-
     "PLC_USERNAME": "वापरकर्ता नाव",
     "PLC_FIRST_NAME": "पहिले नाव",
     "PLC_MIDDLE_NAME": "मधले नाव",
@@ -16,7 +14,6 @@
     "PLC_DATE_OF_BIRTH": "जन्म तारीख",
     "PLC_PASSWORD": "पासवर्ड",
     "PLC_CONFIRM_PASSWORD": "पासवर्डची पुष्टी करा",
-
     "ERR_INVALID_FIRST_NAME": "Invalid First Name.",
     "ERR_INVALID_MIDDLE_NAME": "Invalid Middle Name.",
     "ERR_INVALID_LAST_NAME": "Invalid Last Name.",

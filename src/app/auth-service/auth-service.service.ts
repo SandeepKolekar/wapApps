@@ -30,6 +30,12 @@ export class AuthServiceService {
   getRoleList(){
     return  JSON.parse( localStorage.roleLists);
   }
+  setRoleCode(roleCode){
+    sessionStorage.roleCode = roleCode;
+  }
+  getRoleCode(){
+    return  sessionStorage.roleCode ;
+  }
 
   removeUserData(){
     localStorage.clear();

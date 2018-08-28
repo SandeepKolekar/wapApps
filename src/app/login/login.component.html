@@ -1,14 +1,14 @@
- <!-- Set Language-->
- <div class="col col-xs-12 col-sm-2 col-md-2 col-lg-2 pull-right lang">
+<!-- Set Language-->
+<div class="col col-xs-12 col-sm-2 col-md-2 col-lg-2 pull-right lang">
     <mat-form-field>
-        <mat-select placeholder="Language" name="Language" #selectedLang (keyup)="changeLang(selectedLang.value);">
+        <mat-select placeholder="Language" name="Language" #selectedLang (selectionChange)="changeLang(selectedLang.value);">
             <mat-option *ngFor="let lang of langList" [value]="lang.code">
                 {{lang.value }}
             </mat-option>
         </mat-select>
     </mat-form-field>
 </div>
- 
+
 <div class="mainbox col-xs-12 col-sm-8 col-md-5 col-lg-4 center">
     <div class="panel">
         <!--Page Title  -->
@@ -22,10 +22,15 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <form novalidate [formGroup]="fg" (ngSubmit)="doLogin()">
                     <div class="row">
+                        <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 input-group-box">
+                            <mat-error *ngIf="invalidLogin">
+                                {{'ERR_AUTHENTICATION_FAILED' | translate }}
+                            </mat-error>
+                        </div>
                         <!-- User name-->
                         <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 input-group-box">
                             <mat-form-field class="input-full-width">
-                                <input matInput type="text" formControlName="userName" name="userName" placeholder="{{'PLC_USERNAME' | translate:param }}" />
+                                <input matInput type="text" formControlName="userName" name="userName" (keyup)="usernameChange();" placeholder="{{'PLC_USERNAME' | translate:param }}" />
                                 <mat-error *ngIf="!fg.controls.userName.valid">
                                     {{'ERR_REQUIRED_USERNAME' | translate }}
                                 </mat-error>
@@ -36,8 +41,8 @@
                             <mat-form-field class="input-full-width">
                                 <input matInput type="password" formControlName="password" (keyup)="usernameChange();" name="Password" placeholder="{{'PLC_PASSWORD' | translate:param }}" />
                                 <mat-error *ngIf="!fg.controls.password.valid">
-                                        {{'ERR_REQUIRED_PASSWORD' | translate }}
-                                        </mat-error>
+                                    {{'ERR_REQUIRED_PASSWORD' | translate }}
+                                </mat-error>
                             </mat-form-field>
                         </div>
 
@@ -61,7 +66,7 @@
                 <a (click)="openDialog()">
                     {{'LBL_FORGOT_PASSWORD' | translate }}
                 </a>
-                <a class="dashBoradCountOnHover"  [routerLink]="['/signup']">
+                <a class="dashBoradCountOnHover" [routerLink]="['/signup']">
                     {{ 'LBL_SIGNUP' | translate }}
                 </a>
             </div>

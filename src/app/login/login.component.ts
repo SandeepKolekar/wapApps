@@ -16,16 +16,16 @@ export class LoginComponent {
   pageLoader : boolean;
   currentDate: string;
   invalidLogin: boolean;
-  url : string;
+  data:object;
   private fg: FormGroup;
-  public translate: TranslateService;
+  //public translate: TranslateService;
   constructor(
     private router: Router ,
     private authService: AuthServiceService ,
     private HttpService: HttpService,
     private fb: FormBuilder,
     public dialog: MatDialog,
-    translate: TranslateService
+    private translate: TranslateService
   ) {
     this.fg = fb.group({
       userName: ['', Validators.compose([Validators.required])],
@@ -40,6 +40,8 @@ export class LoginComponent {
     {"code":"ma","value":"Marathi"}
   ];
   changeLang(selectedLang){
+    this.translate.setDefaultLang(selectedLang);
+    this.translate.use(selectedLang);
   }
 
   usernameChange(){
@@ -50,16 +52,15 @@ export class LoginComponent {
     this.pageLoader = true ;
     this.invalidLogin = false ;
     let roleLists , authtoken , currentDate , userCode , userName , menuJson ;
-    this.url = 'login/authenticate';
-    const sendData = {
-      'userName' :this.fg.value.userName ,
-      'password': this.fg.value.password 
+    this.data = {
+      sendData: {
+        'userName' :this.fg.value.userName ,
+        'password': this.fg.value.password 
+      },
+      url: 'login/authenticate'
     };
 
-    this.authService.setUserData("userName","userCode", "authtoken", "menuJson", "roleLists", "currentDate");
-    this.router.navigate(['home']);
-    /*
-    this.HttpService.save(sendData).subscribe(
+    this.HttpService.post(this.data).subscribe(
       res => { 
           this.pageLoader = false ;
           roleLists = JSON.stringify(res.data.roleList);
@@ -69,13 +70,13 @@ export class LoginComponent {
           userName = res.data.userName;
           menuJson = res.data.jsonMenu;
           this.authService.setUserData(userName,userCode, authtoken, menuJson, roleLists, currentDate);
-         this.router.navigate(['home']);
+          this.router.navigate(['home']);
       } , 
       error => {
         this.pageLoader = false ;
         this.invalidLogin = true;
       }
-    ); */
+    ); 
   }
 
   openDialog(): void {

@@ -21,8 +21,8 @@ export class ChatBotComponent implements OnInit {
     this.chatData.push( {code : 'system', msg: 'Something went wrong , please try agian!!!'});
    // this.HttpService.postData('', 'data').subscribe();
 
-   this.HttpService.chatBotPostData(msg)
-   .subscribe( result => {console.dir(result); },
-                error =>   {console.dir(error); } );
+  // this.HttpService.chatBotPostData(msg)
+  // .subscribe( result => {console.dir(result); },
+  //              error =>   {console.dir(error); } );
   }
 }
